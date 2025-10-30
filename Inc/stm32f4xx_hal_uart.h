@@ -194,6 +194,9 @@ typedef struct __UART_HandleTypeDef
 
   __IO uint32_t                 ErrorCode;        /*!< UART Error code                    */
 
+
+  void * context;                                 /*!< UART context                       */
+
 #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
   void (* TxHalfCpltCallback)(struct __UART_HandleTypeDef *huart);        /*!< UART Tx Half Complete Callback        */
   void (* TxCpltCallback)(struct __UART_HandleTypeDef *huart);            /*!< UART Tx Complete Callback             */
